@@ -3,9 +3,9 @@
   <header class="page-header">
     <h1>Order #<%= @order.id %></h1>
   </header>
-
   <div class="order-summary jumbotron">
     <h4>Thank you for your order!</h4>
+    <span><%= @order.email %></span>
   </div>
   <table class="table table-bordered">
       <thead>
