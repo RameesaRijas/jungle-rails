@@ -1,19 +1,19 @@
 class UsersController < ApplicationController
   def new
+    @user = User.new
   end
 
   def create
-    user = User.new(user_params)
+    @user = User.new(user_params)
 
-    if User.find_by(email: user.email)
-      redirect_to '/signup'
+    if User.find_by(email: @user.email)
+      redirect_to signup_path
     else
-      if user.save
+      if @user.save
         session[:user_id] = @user.id
-        redirect_to :home, notice: 'Account created successfully'
+        redirect_to root_path, notice: 'Sign up successful!'
       else
-        flash[:error] = 'An error occured!'
-        render 'new'
+        render :new 
       end
     end
 
