@@ -1,14 +1,26 @@
-<%= form_for :user, url: '/users' do |f| %>
+<%= form_for :user, url: users_path do |form| %>
     <div class="form-group row">
         <div class="col-md-6 col-md-offset-3">
             <h1>Jungle Signup</h1>
-            First Name <%= f.text_field :first_name, class: 'form-control'%>
-            Last Name <%= f.text_field :last_name, class: 'form-control'%>
-            Email <%= f.text_field :email, class: 'form-control' %>
-            Password <%= f.password_field :password, class: 'form-control' %>
-            Password Confirmation <%= f.password_field :password_confirmation, class: 'form-control'%>
+
+            <% if @user.errors.any? %>
+                <div class="alert alert-danger">
+                    <strong>The following errors prevented saving:</strong>
+                    <ul>
+                    <% @user.errors.full_messages.each do |error| %>
+                        <li><%= error %></li>
+                    <% end %>
+                    </ul>
+                </div>
+            <% end %>
+            
+            First Name <%= form.text_field :first_name, class: 'form-control'%>
+            Last Name <%= form.text_field :last_name, class: 'form-control'%>
+            Email <%= form.text_field :email, class: 'form-control' %>
+            Password <%= form.password_field :password, class: 'form-control' %>
+            Password Confirmation <%= form.password_field :password_confirmation, class: 'form-control'%>
             </br>
-            <%= f.submit "Submit", class: "form-control btn btn-info" %>
+            <%= form.submit "Submit", class: "form-control btn btn-info" %>
         </div>
     </div>
 
