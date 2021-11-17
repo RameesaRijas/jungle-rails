@@ -1,8 +1,8 @@
 # Jungle
 
-A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example.
+A mini e-commerce application built with Rails 4.2.
 
-## Additional Steps for Apple M1 Machines
+## Steps for Apple M1 Machines
 
 1. Make sure that you are runnning Ruby 2.6.6 (`ruby -v`)
 1. Install ImageMagick `brew install imagemagick imagemagick@6 --build-from-source`
@@ -31,3 +31,19 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 * Rails 4.2 [Rails Guide](http://guides.rubyonrails.org/v4.2/)
 * PostgreSQL 9.x
 * Stripe
+
+
+## screenshots
+
+!["Sign_up"](https://raw.githubusercontent.com/RameesaRijas/jungle-rails/master/docs/sign_up.png)
+
+!["Home Screenshot, Listed Products"](https://raw.githubusercontent.com/RameesaRijas/jungle-rails/master/docs/home_page.png)
+
+!["Cart"](https://raw.githubusercontent.com/RameesaRijas/jungle-rails/master/docs/cart.png)
+
+!["Payment"](https://raw.githubusercontent.com/RameesaRijas/jungle-rails/master/docs/payment.png)
+
+!["Order Details"](https://raw.githubusercontent.com/RameesaRijas/jungle-rails/master/docs/order_details.png)
+
+
+
